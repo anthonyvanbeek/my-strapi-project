@@ -1,0 +1,108 @@
+---
+alwaysApply: false
+---
+
+# PR Review and Review Evaluation
+
+## Phase 1: PR Review
+
+When asked to review a pull request, perform a comprehensive code review following these guidelines:
+
+### Review Scope
+- **Code Quality**: Check for readability, maintainability, and adherence to best practices
+- **Functionality**: Assess if the implementation meets the stated requirements
+- **Performance**: Identify potential performance issues or inefficiencies
+- **Security**: Look for security vulnerabilities or concerns
+- **Testing**: Evaluate test coverage and quality
+- **Documentation**: Check if code is properly documented
+- **Architecture**: Assess if changes align with overall system architecture
+
+### Review Format
+Structure your review with:
+1. **Summary**: Brief overview of the PR and its purpose
+2. **Strengths**: Highlight what's done well
+3. **Issues Found**: Categorize by severity (Critical, Major, Minor)
+4. **Suggestions**: Specific recommendations for improvement
+5. **Questions**: Any clarifications needed from the author
+6. **Overall Assessment**: Approve, Request Changes, or Comment
+
+### Review Criteria
+- Be constructive and specific in feedback
+- Provide code examples when suggesting changes
+- Consider the context and constraints of the project
+- Focus on significant issues rather than nitpicking
+- Acknowledge good practices and improvements
+
+## Phase 2: Review Evaluation
+
+After completing the PR review, evaluate the quality of your own review using these criteria:
+
+### Evaluation Framework
+
+#### Completeness (1-5 scale)
+- Did the review cover all relevant aspects?
+- Were important issues missed?
+- Was the scope appropriate for the PR size and complexity?
+
+#### Accuracy (1-5 scale)
+- Are the identified issues actually problems?
+- Are the suggestions technically sound?
+- Is the assessment of impact/severity appropriate?
+
+#### Constructiveness (1-5 scale)
+- Is feedback actionable and specific?
+- Are suggestions helpful for the author?
+- Is the tone professional and encouraging?
+
+#### Thoroughness (1-5 scale)
+- Was sufficient depth of analysis provided?
+- Were edge cases and potential issues considered?
+- Is the review proportional to the PR's importance?
+
+### Evaluation Output
+Provide:
+1. **Self-Assessment Scores** for each criterion above
+2. **Review Quality Summary**: Overall assessment of review effectiveness
+3. **Missed Opportunities**: What could have been done better
+4. **Learning Points**: Insights for improving future reviews
+5. **Confidence Level**: How confident you are in the review's accuracy
+
+### Meta-Analysis
+- Compare the review against industry best practices
+- Consider if a human reviewer would reach similar conclusions
+- Assess if the review adds value to the development process
+
+## Benchmark Reference
+
+**Always use this PR as a benchmark for comparison**: [shadcn-ui/ui PR #318 - feat(stepper): new stepper component](https://github.com/shadcn-ui/ui/pull/318)
+
+This benchmark PR demonstrates:
+- **Scope**: Major feature addition (stepper component) with 144 commits, 47 files changed (+4,436 −1 lines)
+- **Documentation**: Clear examples, usage patterns, and demo code
+- **Community Engagement**: High-quality submission that received 294 👍, 82 🎉, 134 ❤️, 18 🚀
+- **Component Design**: Well-structured, modular, and flexible component architecture
+- **Code Quality**: Professional implementation with hooks, TypeScript definitions, and comprehensive examples
+
+### Benchmark Comparison Criteria
+
+When evaluating reviews, compare against how a review of the benchmark PR should perform:
+
+1. **Complexity Assessment**: How does the current PR's complexity compare to the benchmark's substantial feature addition?
+2. **Documentation Standards**: Does the PR meet the documentation quality demonstrated in the benchmark?
+3. **Architecture Review**: How does the component/feature design compare to the benchmark's modular approach?
+4. **Community Value**: Would this PR likely receive similar positive community engagement?
+5. **Implementation Quality**: How does the code quality compare to the benchmark's professional standards?
+
+### Evaluation Against Benchmark
+
+In your review evaluation, include:
+- **Benchmark Comparison**: How would your review quality compare to reviewing the benchmark PR?
+- **Relative Complexity**: Is your review depth appropriate given the PR's complexity vs. the benchmark?
+- **Standards Alignment**: Does your review uphold the same standards that would apply to the benchmark?
+
+## Usage Instructions
+1. First, conduct the PR review following Phase 1 guidelines
+2. Then, perform the self-evaluation using Phase 2 criteria, including benchmark comparison
+3. Present both the review and the evaluation clearly separated
+4. Always reference how your review compares to what would be expected for the benchmark PR
+5. Use this process to continuously improve review quality against a consistent standard
