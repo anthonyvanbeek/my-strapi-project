@@ -15,5 +15,10 @@
     "frontend:build": "npm run build --workspace=@my-strapi-project/frontend",
     "frontend:start": "npm run start --workspace=@my-strapi-project/frontend",
     "frontend:lint": "npm run lint --workspace=@my-strapi-project/frontend"
+  },
+  "overrides": {
+    "@vitejs/plugin-react-swc": {
+      "@swc/core": "1.3.96"
+    }
   }
 }
