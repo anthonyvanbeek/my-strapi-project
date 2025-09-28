@@ -1,0 +1,19 @@
+{
+  "name": "my-strapi-project",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "backend:dev": "npm run develop --workspace=@my-strapi-project/backend",
+    "backend:build": "npm run build --workspace=@my-strapi-project/backend",
+    "backend:start": "npm run start --workspace=@my-strapi-project/backend",
+    "backend:deploy": "npm run deploy --workspace=@my-strapi-project/backend",
+    "frontend:dev": "npm run dev --workspace=@my-strapi-project/frontend",
+    "frontend:build": "npm run build --workspace=@my-strapi-project/frontend",
+    "frontend:start": "npm run start --workspace=@my-strapi-project/frontend",
+    "frontend:lint": "npm run lint --workspace=@my-strapi-project/frontend"
+  }
+}

@@ -80,8 +80,8 @@ $RECYCLE.BIN/
 ssl
 .idea
 nbproject
-public/uploads/*
-!public/uploads/.gitkeep
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
 
 ############################
 # Node.js
@@ -93,6 +93,8 @@ pids
 logs
 results
 node_modules
+backend/node_modules
+frontend/node_modules
 .node_history
 
 ############################
@@ -106,10 +108,21 @@ coverage
 ############################
 
 .env
+backend/.env
 license.txt
 exports
 .strapi
-dist
+backend/.strapi
 build
+backend/build
 .strapi-updater.json
+backend/.strapi-updater.json
 .strapi-cloud.json
+backend/.tmp
+
+############################
+# Next.js
+############################
+
+frontend/.next
+frontend/out
