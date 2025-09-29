@@ -18,13 +18,20 @@ Install dependencies for both workspaces from the repository root:
 npm install
 ```
 
+### Configure environment variables
+
+- Backend variables live in `backend/.env` (see `backend/.env.example`).
+- Frontend variables live in `frontend/.env` (copy `frontend/.env.example`).
+  - `STRAPI_API_URL` – the public URL of your Strapi Cloud project.
+  - `STRAPI_API_TOKEN` – optional API token with read access to the **Article** collection; leave blank if the collection is public.
+
 ### Run the Strapi backend
 
 ```bash
 npm run backend:dev
 ```
 
-The command runs `strapi develop` inside `backend/`. Environment variables live in `backend/.env`.
+This runs `strapi develop` inside `backend/`.
 
 ### Run the Next.js frontend
 
@@ -32,7 +39,7 @@ The command runs `strapi develop` inside `backend/`. Environment variables live 
 npm run frontend:dev
 ```
 
-The app starts on [http://localhost:3000](http://localhost:3000). Update API URLs in the frontend as you build out the integration.
+The app starts on [http://localhost:3000](http://localhost:3000) and pulls live content from Strapi using the values defined in `frontend/.env`.
 
 ## Deploying to Strapi Cloud
 
@@ -45,7 +52,7 @@ Populate the Strapi Cloud environment variables using the keys from `backend/.en
 
 ## Deploying the frontend
 
-The Next.js app can be deployed separately (Vercel, Netlify, etc.). Configure it to build from `/frontend` and provide environment variables for the backend API URL.
+The Next.js app can be deployed separately (Vercel, Netlify, etc.). Configure it to build from `/frontend` and provide the same `STRAPI_API_URL` and `STRAPI_API_TOKEN` environment variables.
 
 ## Additional Scripts
 

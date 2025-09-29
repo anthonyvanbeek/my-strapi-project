@@ -126,3 +126,4 @@ backend/.tmp
 
 frontend/.next
 frontend/out
+frontend/.env
