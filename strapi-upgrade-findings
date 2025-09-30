@@ -1,0 +1,149 @@
+Need to upgrade to latest minor version first :
+run `npx @strapi/upgrade minor`
+
+Then upgrade major version :
+run `npx @strapi/upgrade major`
+
+
+
+npx @strapi/upgrade major
+[WARN]  [2025-09-29T22:21:00.534Z] Please make sure you've created a backup of your codebase and files before upgrading
+[INFO]  [2025-09-29T22:21:02.395Z] Upgrading from v4.25.23 to v5.24.2
+[INFO]  [2025-09-29T22:21:02.404Z] (1/4) Checking requirement...
+[WARN]  [2025-09-29T22:21:02.644Z] Repository is not clean. Please commit or stash any changes before upgrading
+✔ Ignore optional requirement "REQUIRE_GIT_CLEAN_REPOSITORY" ? … yes
+[INFO]  [2025-09-29T22:21:09.305Z] (2/4) Applying the latest code modifications...
+┌────┬─────────┬──────┬────────────────────────────────────────┬──────────┬───────────┬─────────────────────┐
+│ N° │ Version │ Kind │ Name                                   │ Affected │ Unchanged │ Duration            │
+├────┼─────────┼──────┼────────────────────────────────────────┼──────────┼───────────┼─────────────────────┤
+│ 0  │ 5.0.0   │ code │ comment out lifecycle files            │ 0        │ 12        │ 3.241s (cold start) │
+│ 1  │ 5.0.0   │ json │ dependency remove strapi plugin i18n   │ 1        │ 1         │ 0.261s              │
+│ 2  │ 5.0.0   │ json │ dependency upgrade react and react dom │ 0        │ 2         │ 0.034s              │
+│ 3  │ 5.0.0   │ json │ dependency upgrade react router dom    │ 1        │ 1         │ 0.014s              │
+│ 4  │ 5.0.0   │ json │ dependency upgrade styled components   │ 1        │ 1         │ 0.017s              │
+│ 5  │ 5.0.0   │ code │ deprecate helper plugin                │ 0        │ 12        │ 0.125s              │
+│ 6  │ 5.0.0   │ code │ entity service document service        │ 0        │ 12        │ 0.040s              │
+│ 7  │ 5.0.0   │ code │ s3 keys wrapped in credentials         │ 0        │ 12        │ 0.020s              │
+│ 8  │ 5.0.0   │ json │ sqlite3 to better sqlite3              │ 0        │ 2         │ 0.017s              │
+│ 9  │ 5.0.0   │ code │ strapi public interface                │ 0        │ 12        │ 0.040s              │
+│ 10 │ 5.0.0   │ code │ use uid for config namespace           │ 0        │ 12        │ 0.071s              │
+│ 11 │ 5.0.0   │ code │ utils public interface                 │ 0        │ 12        │ 0.065s              │
+│ 12 │ 5.1.0   │ json │ dependency better sqlite3              │ 1        │ 1         │ 0.015s              │
+└────┴─────────┴──────┴────────────────────────────────────────┴──────────┴───────────┴─────────────────────┘
+[INFO]  [2025-09-29T22:21:13.454Z] (3/4) Upgrading Strapi dependencies...
+[INFO]  [2025-09-29T22:21:13.457Z] (4/4) Installing dependencies...
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @strapi/helper-plugin@4.25.19
+npm warn Found: react-router-dom@6.30.1
+npm warn backend/node_modules/react-router-dom
+npm warn   react-router-dom@"^6.0.0" from @my-strapi-project/backend@0.1.0
+npm warn   backend
+npm warn     @my-strapi-project/backend@0.1.0
+npm warn     node_modules/@my-strapi-project/backend
+npm warn   4 more (@strapi/plugin-cloud, @strapi/admin, @strapi/strapi, @strapi/plugin-users-permissions)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-router-dom@"^5.2.0" from @strapi/helper-plugin@4.25.19
+npm warn backend/node_modules/@strapi/helper-plugin
+npm warn   @strapi/helper-plugin@"4.25.19" from @strapi/plugin-i18n@4.25.19
+npm warn   backend/node_modules/@strapi/plugin-i18n
+npm warn
+npm warn Conflicting peer dependency: react-router-dom@5.3.4
+npm warn node_modules/react-router-dom
+npm warn   peer react-router-dom@"^5.2.0" from @strapi/helper-plugin@4.25.19
+npm warn   backend/node_modules/@strapi/helper-plugin
+npm warn     @strapi/helper-plugin@"4.25.19" from @strapi/plugin-i18n@4.25.19
+npm warn     backend/node_modules/@strapi/plugin-i18n
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @strapi/helper-plugin@4.25.19
+npm warn Found: styled-components@6.1.19
+npm warn backend/node_modules/styled-components
+npm warn   styled-components@"^6.0.0" from @my-strapi-project/backend@0.1.0
+npm warn   backend
+npm warn     @my-strapi-project/backend@0.1.0
+npm warn     node_modules/@my-strapi-project/backend
+npm warn   6 more (@strapi/plugin-cloud, @strapi/admin, @strapi/strapi, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer styled-components@"^5.2.1" from @strapi/helper-plugin@4.25.19
+npm warn backend/node_modules/@strapi/helper-plugin
+npm warn   @strapi/helper-plugin@"4.25.19" from @strapi/plugin-i18n@4.25.19
+npm warn   backend/node_modules/@strapi/plugin-i18n
+npm warn
+npm warn Conflicting peer dependency: styled-components@5.3.11
+npm warn node_modules/styled-components
+npm warn   peer styled-components@"^5.2.1" from @strapi/helper-plugin@4.25.19
+npm warn   backend/node_modules/@strapi/helper-plugin
+npm warn     @strapi/helper-plugin@"4.25.19" from @strapi/plugin-i18n@4.25.19
+npm warn     backend/node_modules/@strapi/plugin-i18n
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @strapi/plugin-i18n@4.25.19
+npm warn Found: @strapi/strapi@5.24.2
+npm warn backend/node_modules/@strapi/strapi
+npm warn   @strapi/strapi@"5.24.2" from @my-strapi-project/backend@0.1.0
+npm warn   backend
+npm warn     @my-strapi-project/backend@0.1.0
+npm warn     node_modules/@my-strapi-project/backend
+npm warn   2 more (@strapi/plugin-cloud, @strapi/plugin-users-permissions)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer @strapi/strapi@"^4.0.0" from @strapi/plugin-i18n@4.25.19
+npm warn backend/node_modules/@strapi/plugin-i18n
+npm warn
+npm warn Conflicting peer dependency: @strapi/strapi@4.25.23
+npm warn node_modules/@strapi/strapi
+npm warn   peer @strapi/strapi@"^4.0.0" from @strapi/plugin-i18n@4.25.19
+npm warn   backend/node_modules/@strapi/plugin-i18n
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @strapi/plugin-i18n@4.25.19
+npm warn Found: react-router-dom@6.30.1
+npm warn backend/node_modules/react-router-dom
+npm warn   react-router-dom@"^6.0.0" from @my-strapi-project/backend@0.1.0
+npm warn   backend
+npm warn     @my-strapi-project/backend@0.1.0
+npm warn     node_modules/@my-strapi-project/backend
+npm warn   4 more (@strapi/plugin-cloud, @strapi/admin, @strapi/strapi, @strapi/plugin-users-permissions)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-router-dom@"^5.2.0" from @strapi/plugin-i18n@4.25.19
+npm warn backend/node_modules/@strapi/plugin-i18n
+npm warn
+npm warn Conflicting peer dependency: react-router-dom@5.3.4
+npm warn node_modules/react-router-dom
+npm warn   peer react-router-dom@"^5.2.0" from @strapi/plugin-i18n@4.25.19
+npm warn   backend/node_modules/@strapi/plugin-i18n
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @strapi/plugin-i18n@4.25.19
+npm warn Found: styled-components@6.1.19
+npm warn backend/node_modules/styled-components
+npm warn   styled-components@"^6.0.0" from @my-strapi-project/backend@0.1.0
+npm warn   backend
+npm warn     @my-strapi-project/backend@0.1.0
+npm warn     node_modules/@my-strapi-project/backend
+npm warn   6 more (@strapi/plugin-cloud, @strapi/admin, @strapi/strapi, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer styled-components@"^5.2.1" from @strapi/plugin-i18n@4.25.19
+npm warn backend/node_modules/@strapi/plugin-i18n
+npm warn
+npm warn Conflicting peer dependency: styled-components@5.3.11
+npm warn node_modules/styled-components
+npm warn   peer styled-components@"^5.2.1" from @strapi/plugin-i18n@4.25.19
+npm warn   backend/node_modules/@strapi/plugin-i18n
+npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+added 740 packages, removed 416 packages, changed 72 packages, and audited 2020 packages in 2m
+
+273 packages are looking for funding
+  run `npm fund` for details
+
+21 vulnerabilities (19 low, 2 moderate)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[INFO]  [2025-09-29T22:23:00.147Z] Completed in 119.611sms

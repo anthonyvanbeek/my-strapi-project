@@ -14,7 +14,8 @@
     "frontend:dev": "npm run dev --workspace=@my-strapi-project/frontend",
     "frontend:build": "npm run build --workspace=@my-strapi-project/frontend",
     "frontend:start": "npm run start --workspace=@my-strapi-project/frontend",
-    "frontend:lint": "npm run lint --workspace=@my-strapi-project/frontend"
+    "frontend:lint": "npm run lint --workspace=@my-strapi-project/frontend",
+    "backend:sync:cloud": "npm run sync:cloud:pull --workspace=@my-strapi-project/backend"
   },
   "overrides": {
     "@vitejs/plugin-react-swc": {
